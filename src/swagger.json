@@ -1,0 +1,103 @@
+{
+    "openapi": "3.0.0",
+  
+    "info": {
+      "title": "API da JobsNet",
+      "description": "Api desenvolvida para o projeto da Gama Academy",
+      "version": "0.0.1"
+    },
+  
+    "servers": [
+      {
+        "url": "http://localhost:5000",
+        "description": "ambiente de desenvolvimento"
+      }
+    ],
+  
+    "paths": {
+      "/register": {
+        "post": {
+          "summary": "Cadastro de candidato",
+          "description": "Rota de cadastro de usuário, recebe: nome, cargo,nascimento, genero, estadoCivil,cpf, identidade, cep, cidade, endereco, bairro, celular, email, habilitacao, veiculo",
+          "tags": ["candidato"],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "nome": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                      "type": "string"
+                    },
+                    "nascimento": {
+                      "type": "string"
+                    },
+                    "genero": {
+                      "type": "string"
+                    },
+                    "estadoCivil": {
+                      "type": "string"
+                    },
+                    "cpf": {
+                      "type": "string"
+                    },
+                    "identidade": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "cidade": {
+                      "type": "string"
+                    },
+                    "endereco": {
+                      "type": "string"
+                    },
+                    "bairro": {
+                      "type": "string"
+                    },
+                    "celular": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "habilitacao": {
+                      "type": "string"
+                    },
+                    "veiculo": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "simplismente eu": {
+                    "value": {
+                      "nome": "Glenda Borges",
+                      "cargo": "Desenvolvedora FullStack",
+                      "nascimento": "00000-000",
+                      "genero": "feminino",
+                      "estadoCivil": "solteira",
+                      "cpf": "00000-000",
+                      "identidade": "00000-000",
+                      "cep": "00000-000",
+                      "cidade": "salvador",
+                      "endereco": "rua do alecrim dourado ",
+                      "bairro": "condominio tudo gold",
+                      "celular": "00000-000",
+                      "email": "glenda@glemail.com",
+                      "habilitacao": "sim -A",
+                      "veiculo": "não"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
